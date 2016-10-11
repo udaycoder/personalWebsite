@@ -9,26 +9,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<div class="container-fluid">
-  <div class="page-header">
+<div class="container-fluid" id="home">
+  <div class="page-header" >
        <center><p style="font: italic bold 40px Book Antiqua, serif;" class="well well-lg">Udayan Baidya<br><span style="font-size:20px;">Engineer by choice</span></p></center>
   </div>
 
-  <div data-spy="affix" data-offset-top="230" id="menu-bar" class="btn-group btn-group-justified">
-    <a href="#About" class="btn btn-primary">About Me</a>
-    <a href="#Project" class="btn btn-primary">Projects</a>
-    <a href="#Training" class="btn btn-primary">Trainings and Certifications</a>
-    <a href="Resume\MyCV-UdayanBaidya.pdf" target="_blank" class="btn btn-primary">Resume <span class="glyphicon glyphicon-download"></span></a>
-    <a href="#Contact" class="btn btn-primary">Contact <span class="glyphicon glyphicon-envelope"></span></a>
-  </div>
+  <nav class="navbar navbar-default" data-spy="affix" data-offset-top="225">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#home"> <span class="glyphicon glyphicon-home"></span>Home</a>
+      </div>
+      <ul class="nav navbar-nav">
+    <li><a href="#About">About Me</a></li>
+  <li><a href="#Project">Projects</a></li>
+    <li><a href="#Training">Trainings and Certifications</a></li>
+    <li><a href="#Contact">Contact <span class="glyphicon glyphicon-envelope"></span></a></li>
+    <li><a href="Resume\MyCV-UdayanBaidya.pdf" target="_blank">Resume <span class="glyphicon glyphicon-download"></span></a></li>
+
+  </ul>
+</div>
+  </nav>
 
   <div id="main-body">
-  <div class="row" style="margin-left:5%;margin-right:5%;">
+  <div class="row">
     <div class="col-md-3">
 
-      <p><img src="CSS/Udayan Pic.jpg" class="img-responsive img-thumbnail" style="width:200px;height:200px;"></p>
+      <p><img src="CSS/Udayan Pic.jpg" class="img-responsive img-thumbnail" style="width:200px;height:200px;margin-left:10%;"></p>
 
     </div>
 
