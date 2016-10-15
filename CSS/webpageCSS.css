@@ -45,3 +45,7 @@ body {
       max-height: 430px !important;
       margin: auto;
   }
+
+  #daily-quotes{
+    display: none;
+  }
