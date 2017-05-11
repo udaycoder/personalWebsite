@@ -12,8 +12,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="CSS/webpageCSS.css">
-  <script src="JS/webpageJS.js"></script>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'MyPortfolio/css/webpageCSS.css' %}">
+  <script src="{% static 'MyPortfolio/js/webpageJS.js' %}"></script>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,18 +45,18 @@
   </ol>
 
 
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner" role="listbox" >
 
     <div class="item active">
-      <img src="CSS/1.jpg" alt="ACM_ICPC">
+      <img src="{% static 'MyPortfolio/css/1.jpg' %}" alt="ACM_ICPC">
     </div>
 
     <div class="item">
-      <img src="CSS/2.jpg" alt="Coding">
+      <img src="{% static 'MyPortfolio/css/2.jpg' %}" alt="Coding">
     </div>
 
     <div class="item">
-      <img src="CSS/3.jpg" alt="Family">
+      <img src="{% static 'MyPortfolio/css/3.jpg' %}" alt="Family">
     </div>
 
   </div>
@@ -71,20 +72,20 @@
   </a>
 </div>
 
-  <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="590">
+  <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="590" >
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#home"> <span class="glyphicon glyphicon-home"></span>Home</a>
+        <a class="navbar-brand" id="myhome" href="#home"> <span class="glyphicon glyphicon-home"></span>Home</a>
       </div>
       <ul class="nav navbar-nav">
-    <li><a href="#About">About Me</a></li>
-  <li><a href="#Project">Projects</a></li>
-    <li><a href="#Training">Trainings and Certifications</a></li>
-    <li><a href="#Competitions">Competitions</a></li>
-    <li><a href="#Extra">Extracurricular Activities</a></li>
-    <li><a href="#Contact">Contact <span class="glyphicon glyphicon-envelope"></span></a></li>
-    <li><a href="Resume\Udayan_Baidya_Resume.pdf" target="_blank">Resume <span class="glyphicon glyphicon-download"></span></a></li>
-
+    <li><a id="myabout" href="#About">About Me</a></li>
+  <li><a id="myproject" href="#Project">Projects</a></li>
+    <li><a id="mytraining" href="#Training">Trainings and Certifications</a></li>
+    <li><a id="mycompetitions" href="#Competitions">Competitions</a></li>
+    <li><a id="myextra" href="#Extra">Extracurricular Activities</a></li>
+    <li><a id="mycontact" href="#Contact">Contact <span class="glyphicon glyphicon-envelope"></span></a></li>
+    <li><a href="{% static 'MyPortfolio/Resume/Udayan_Baidya_Resume.pdf' %}" target="_blank">Resume <span class="glyphicon glyphicon-download"></span></a></li>
+    <li><a id="myCode" href="#CodeNow">Code!Compile!Run!</a></li>
   </ul>
 </div>
   </nav>
@@ -92,11 +93,13 @@
 
   <div id="main-body">
   <div class="row">
-    <div class="col-lg-3">
+    <div class="col-lg-3" id="picdiv">
 
-      <p><img src="CSS/Udayan Pic.jpg" class="img-responsive img-thumbnail" id="DP"></p>
+      <p><img src="{% static 'MyPortfolio/css/Udayan Pic.jpg' %}" class="img-responsive img-thumbnail" id="DP"></p>
 
     </div>
+
+
 
     <div class="col-lg-6" id="About">
     <div class="panel panel-default">
@@ -109,6 +112,7 @@
   </p></div>
 </div>
     </div>
+  </div>
 
 
 <div class="row">
